@@ -9,8 +9,10 @@ pipeline {
         }
         stage('Pull Content') {
             steps {
-                sh 'cp -r develop f1'  
+                sh 'mkdir main'
+                sh 'cp -r * main'
             }
         }
     }
 }
+
