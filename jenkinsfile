@@ -1,0 +1,16 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Clone') {
+            steps {
+                git branch: 'develop', url: 'https://github.com/DevarajVin/Vin_Intallipaat.git'
+            }
+        }
+        stage('Pull Content') {
+            steps {
+                sh 'cp -r develop f1'  
+            }
+        }
+    }
+}
